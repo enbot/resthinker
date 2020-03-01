@@ -1,18 +1,19 @@
 import React from 'react';
-import Timer from './containers/timer/Timer'
+
+
+import './styles/app.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="enbot">
 
-        <p>
-          works
+
+      <p>
+        works
         </p>
 
-        <Timer />
 
-      </header>
+
     </div>
   );
 }

@@ -4,12 +4,17 @@ export default class Timer extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { seconds: 0 };
+        this.state = {
+            seconds: 0,
+            list: [1]
+        };
     }
 
     tick() {
+
         this.setState(state => ({
-            seconds: state.seconds + 1
+            seconds: state.seconds + 1,
+            list: state.list
         }));
     }
 
@@ -24,7 +29,12 @@ export default class Timer extends React.Component {
     render() {
         return (
             <div>
-                Seconds: {this.state.seconds}
+                <div>
+                    {this.state.list}
+                </div>
+                <div>
+                    Seconds: {this.state.seconds}
+                </div>
             </div>
         );
     }
