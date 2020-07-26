@@ -11,17 +11,18 @@ class Kernel:
         self.__load()
 
     def __load(self):
-        if not Path.exists(Brain.path):
+        if not Path.exists(Brain.getPath()):
             self.__create()
         else:
             self.__start()
 
     def __create(self):
-        self.__kernel.bootstrap(learnFiles=Brain.entry, commands=Brain.command)
-        self.__kernel.saveBrain(Brain.path)
+        self.__kernel.bootstrap(
+            learnFiles=Brain.getEntry(), commands=Brain.getCommand())
+        self.__kernel.saveBrain(Brain.getPath())
 
     def __start(self):
-        self.__kernel.bootstrap(brainFile=Brain.path)
+        self.__kernel.bootstrap(brainFile=Brain.getPath())
 
     def ask(self, message):
         return self.__kernel.respond(message)

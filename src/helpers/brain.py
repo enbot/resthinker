@@ -1,20 +1,19 @@
-from src.helpers.path import Path
+class Brain():
 
+    __path = 'src/brain/bot_brain.brn'
 
-class Brain:
+    __entry = 'src/aiml/tests.xml'
 
-    command = 'LOAD TESTS FILES'
-    path = 'src/brain/bot_brain.brn'
-    entry = 'src/aiml/tests.xml'
+    __command = 'LOAD TESTS FILES'
 
-    # @staticmethod
-    # def path():
-    #     return Brain.__path
+    @staticmethod
+    def getPath():
+        return Brain.__path
 
-    # @staticmethod
-    # def entry():
-    #     return Brain.__entry
+    @staticmethod
+    def getEntry():
+        return Brain.__entry
 
-    # @staticmethod
-    # def command():
-    #     return Brain.__command
+    @staticmethod
+    def getCommand():
+        return Brain.__command
