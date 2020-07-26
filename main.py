@@ -1,6 +1,6 @@
 from flask import Flask
 
-from src.helpers.environment import Environment as Env
+from src.helpers.environment import Environment
 from src.models.kernel import Kernel
 from src.http.response import Response
 from src.http.request import Request
@@ -27,7 +27,7 @@ def message():
 
 if __name__ == "__main__":
     app.run(
-        host=Env.host(),
-        port=Env.port(),
-        debug=Env.debug()
+        host=Environment.getHost(),
+        port=Environment.getPort(),
+        debug=Environment.getDebug(),
     )

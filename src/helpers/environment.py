@@ -5,13 +5,13 @@ class Environment:
     __port = 5000
 
     @staticmethod
-    def host():
+    def getHost():
         return Environment.__host
 
     @staticmethod
-    def debug():
+    def getDebug():
         return Environment.__debug
 
     @staticmethod
-    def port():
+    def getPort():
         return Environment.__port
