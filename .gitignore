@@ -1,9 +1,7 @@
 # output
 __pycache__
 *.pyc
-
-# app
-brain
+*.brn
 
 #ide
 .vscode

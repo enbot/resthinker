@@ -1,32 +1,27 @@
 import aiml
-import os
+
+from src.helpers.path import Path
+from src.helpers.brain import Brain
 
 
 class Kernel:
 
     def __init__(self):
         self.__kernel = aiml.Kernel()
-        self.__hasBrain = False
-        self.__brain = 'brain/bot_brain.brn'
-        self.__command = 'LOAD TESTS FILES'
-        self.__aiml = 'src/aiml/tests.xml'
+        self.__load()
 
-    def load(self):
-        if os.path.isfile(self.__brain):
-            self.__kernel.bootstrap(brainFile=self.__brain)
+    def __load(self):
+        if not Path.exists(Brain.path):
+            self.__create()
         else:
-            os.makedirs('brain')
-            self.__kernel.bootstrap(learnFiles=os.path.abspath(
-                self.__aiml), commands=self.__command)
-            self.__kernel.saveBrain(self.__brain)
-            self.__hasBrain = True
-        return self.__hasBrain
+            self.__start()
 
-    def loaded(self):
-        return self.__hasBrain
+    def __create(self):
+        self.__kernel.bootstrap(learnFiles=Brain.entry, commands=Brain.command)
+        self.__kernel.saveBrain(Brain.path)
 
-    def save(self):
-        self.__kernel.saveBrain(self.__brain)
+    def __start(self):
+        self.__kernel.bootstrap(brainFile=Brain.path)
 
     def ask(self, message):
         return self.__kernel.respond(message)
