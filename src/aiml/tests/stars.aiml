@@ -10,4 +10,14 @@
         </template>
     </category>
 
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR NAME</that>
+        <template>
+            <srai>
+            MY NAME IS <star/>
+            </srai>
+        </template>
+    </category> 
+
 </aiml>
