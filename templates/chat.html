@@ -143,7 +143,7 @@
                 url: "/",
                 data: $(this).serialize(),
                 success: function (response) {
-                    $('#msg').val('')
+                    $('#message').val('')
 
                     $(".media-list")
                         .append(`<li class="media-bot">${response.data.output}<hr/></li>`);
@@ -152,7 +152,7 @@
                         .stop()
                         .animate({ scrollTop: $(".fixed-panel")[0].scrollHeight }, 1000)
 
-                    msg.text = answer
+                    msg.text = response.data.output
                     speechSynthesis.speak(msg)
 
                 }, error: error => console.log(error)

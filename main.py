@@ -1,13 +1,13 @@
 from flask import Flask
 
 from src.helpers.server import Server
-from src.models.kernel import Kernel
 from src.http.response import Response
 from src.http.request import Request
+from src.models.core import Core
 
 app = Flask(__name__)
 
-kernel = Kernel()
+core = Core()
 response = Response()
 request = Request()
 
@@ -21,8 +21,8 @@ def render():
 def message():
     message = request.field('message')
     session = request.field('session')
-    status = kernel.boot(session)
-    callback = kernel.ask(message)
+    status = core.boot(session)
+    callback = core.ask(message)
     return response.ok({
         "input": message,
         "output": callback,

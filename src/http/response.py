@@ -14,10 +14,10 @@ class Response:
     def render(self, name): 
         return self.__render('%s.html' % name)
 
-    def ok(self, message):
+    def ok(self, data):
         return jsonify(
             {
                 'status': 'OK',
-                'message': message
+                'data': data
             }
         )
