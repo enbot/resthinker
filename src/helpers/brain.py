@@ -1,14 +1,12 @@
-class Brain():
+class Brain:
 
-    __path = 'src/brain/bot_brain.brn'
-
+    __path = 'src/brain/ID00%s.brn'
     __entry = 'src/aiml/tests.xml'
-
     __command = 'LOAD TESTS FILES'
 
     @staticmethod
-    def getPath():
-        return Brain.__path
+    def getPath(session):
+        return Brain.__path % session
 
     @staticmethod
     def getEntry():

@@ -95,8 +95,8 @@
         <form class="panel-footer" method="post" id="chatbot-form">
             <div class="input-group">
 
-                <input type="text" class="form-control" placeholder="Enter Message" name="msg" id="msg" autofocus
-                    required />
+                <input type="text" class="form-control" placeholder="Enter Message" name="message" id="message" autofocus required />
+                <input type="hidden" value="1" name="session" id="session" required>
 
                 <span class="input-group-btn">
                     <button class="btn btn-info" id="chatbot-form-btn">Send</button>
@@ -136,7 +136,7 @@
             e.preventDefault()
 
             $(".media-list")
-                .append(`<li class="media-user">${$('#msg').val()}<hr/></li>`)
+                .append(`<li class="media-user">${$('#message').val()}<hr/></li>`)
 
             $.ajax({
                 type: "POST",
@@ -146,7 +146,7 @@
                     $('#msg').val('')
 
                     $(".media-list")
-                        .append(`<li class="media-bot">${response.message}<hr/></li>`);
+                        .append(`<li class="media-bot">${response.data.output}<hr/></li>`);
 
                     $(".fixed-panel")
                         .stop()
