@@ -2,18 +2,18 @@
     <category>
         <pattern>LOAD TESTS FILES</pattern>
         <template>
-            <learn>src/aiml/tests/condition.aiml</learn>
-            <learn>src/aiml/tests/date.aiml</learn>
-            <learn>src/aiml/tests/formatting.aiml</learn>
-            <learn>src/aiml/tests/input.aiml</learn>
-            <learn>src/aiml/tests/random.aiml</learn>
-            <learn>src/aiml/tests/srai.aiml</learn>
-            <learn>src/aiml/tests/stars.aiml</learn>
-            <learn>src/aiml/tests/tests.aiml</learn>
-            <learn>src/aiml/tests/that.aiml</learn>
-            <learn>src/aiml/tests/think.aiml</learn>
-            <learn>src/aiml/tests/topic.aiml</learn>
-            <learn>src/aiml/tests/default.aiml</learn>
+            <learn>aiml/tests/condition.aiml</learn>
+            <learn>aiml/tests/date.aiml</learn>
+            <learn>aiml/tests/formatting.aiml</learn>
+            <learn>aiml/tests/input.aiml</learn>
+            <learn>aiml/tests/random.aiml</learn>
+            <learn>aiml/tests/srai.aiml</learn>
+            <learn>aiml/tests/stars.aiml</learn>
+            <learn>aiml/tests/tests.aiml</learn>
+            <learn>aiml/tests/that.aiml</learn>
+            <learn>aiml/tests/think.aiml</learn>
+            <learn>aiml/tests/topic.aiml</learn>
+            <learn>aiml/tests/default.aiml</learn>
         </template>
     </category>
 </aiml>

@@ -1,11 +1,11 @@
-from src.helpers.path import Path
+from helpers.path import Path
 
 
 class Brain:
 
     def __init__(self):
-        self.__path = 'src/brain/ENBOT00%s.brn'
-        self.__entry = 'src/aiml/tests.xml'
+        self.__path = 'brain/ENBOT00%s.brn'
+        self.__entry = 'aiml/tests.xml'
         self.__command = 'LOAD TESTS FILES'
 
     def handle(self, session):

@@ -1,9 +1,9 @@
 from flask import Flask
 
-from src.helpers.server import Server
-from src.http.response import Response
-from src.http.request import Request
-from src.models.core import Core
+from helpers.server import Server
+from http.response import Response
+from http.request import Request
+from models.core import Core
 
 app = Flask(__name__)
 

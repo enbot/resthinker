@@ -1,10 +1,10 @@
 import aiml
 
-from src.models.brain import Brain
-from src.models.session import Session
-from src.models.kernel import Kernel
-from src.helpers.status import Status
-from src.helpers.path import Path
+from models.brain import Brain
+from models.session import Session
+from models.kernel import Kernel
+from helpers.status import Status
+from helpers.path import Path
 
 
 class Core:
