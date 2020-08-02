@@ -26,7 +26,8 @@ class Status:
         path = self.__path % id
         command = self.__command
         entry = self.__entry
-        exists = Path.exists(path)
+        absolute = Path.aboslute(path)
+        exists = Path.exists(absolute)
         return {
             "exists": exists,
             "command": command,
