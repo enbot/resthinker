@@ -5,12 +5,12 @@ args = Args()
 core = Core()
 
 params = args.getParams()
-query = params.query
+message = params.message
 session = params.session
 status = core.boot(session)
-callback = core.ask(query)
+callback = core.ask(message)
 
-print('input >> ' + query)
+print('input >> ' + message)
 print('output >> ' + callback)
 print('status >> ' + status)
 print('session >> ' + session)
