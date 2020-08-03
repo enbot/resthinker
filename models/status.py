@@ -1,6 +1,5 @@
 from helpers.path import Path
 
-
 class Status:
 
     CREATED = 'created'
@@ -10,10 +9,15 @@ class Status:
     LOGGED = 'logged'
 
     def __init__(self):
-        self.__path = 'brain/ENBOT00%s.brn'
-        self.__entry = 'aiml/tests.xml'
-        self.__command = 'LOAD TESTS FILES'
+        self.__path = None
+        self.__entry = None
+        self.__command = None
         self.__session = None
+
+    def createPaths(self, entry, output, command):
+        self.__path = output + '/ENBOT00%s.brn'
+        self.__entry = entry + '/startup.xml'
+        self.__command = command
 
     def handleSession(self, id):
         logged = self.__session is id

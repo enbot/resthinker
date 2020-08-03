@@ -5,9 +5,13 @@ args = Args()
 core = Core()
 
 params = args.getParams()
-message = params.message
+entry = params.entry
+output = params.output
 session = params.session
-status = core.boot(session)
+message = params.message
+command = params.command
+
+status = core.start(entry, output, command, session)
 callback = core.ask(message)
 
 print('input >> ' + message)
