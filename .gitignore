@@ -1,12 +1,11 @@
 # output
-__pycache__
 *.pyc
 *.brn
-
-# build
-output
-build
 
 #ide
 .vscode
 .history
+
+# build
+output
+build
