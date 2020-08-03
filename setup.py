@@ -17,7 +17,7 @@ setup(
     ],
     classifiers=[
         "Programming Language :: Python :: 2",
-        "License :: MIT License",
+        "License :: GNU General Public License v3.0",
         "Operating System :: OS Independent",
     ],
     scripts=[
