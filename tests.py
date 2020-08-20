@@ -19,8 +19,8 @@
 # @app.route("/", methods=['POST'])
 # def message():
 #     message = request.field('message')
-#     session = request.field('session')
-#     status = core.boot(session)
+#     uuid = request.field('uuid')
+#     status = core.boot(uuid)
 #     callback = core.ask(message)
 #     return response.ok({
 #         "input": message,

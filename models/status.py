@@ -12,16 +12,16 @@ class Status:
         self.__path = None
         self.__entry = None
         self.__command = None
-        self.__session = None
+        self.__uuid = None
 
     def createPaths(self, entry, output, command):
         self.__path = output + '/ENBOT00%s.brn'
         self.__entry = entry + '/startup.xml'
         self.__command = command
 
-    def handleSession(self, id):
-        logged = self.__session is id
-        self.__session = id
+    def handleUuid(self, id):
+        logged = self.__uuid is id
+        self.__uuid = id
         return {
             "logged": logged
         }
