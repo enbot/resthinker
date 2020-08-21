@@ -18,3 +18,6 @@ class Kernel:
 
     def ask(self, message):
         return self.__aiml.respond(message)
+
+    def state(self, state):
+        self.__aiml.setBotPredicate('state', state)
