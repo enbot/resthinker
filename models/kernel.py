@@ -9,15 +9,12 @@ class Kernel:
 
     def create(self, brain):
         self.__aiml.resetBrain()
-        self.__aiml.bootstrap(learnFiles=brain["entry"], commands=brain["command"])
-        self.__aiml.saveBrain(brain["path"])
+        self.__aiml.bootstrap(learnFiles=brain["entry"], commands=brain["load"])
+        self.__aiml.saveBrain(brain["output"])
 
     def load(self, brain):
         self.__aiml.resetBrain()
-        self.__aiml.bootstrap(brainFile=brain["path"])
+        self.__aiml.bootstrap(brainFile=brain["output"])
 
     def ask(self, message):
         return self.__aiml.respond(message)
-
-    def state(self, state):
-        self.__aiml.setBotPredicate('state', state)
