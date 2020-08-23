@@ -1,6 +1,5 @@
 import aiml
 
-from helpers.path import Path
 
 class Kernel:
 
