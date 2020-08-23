@@ -7,9 +7,6 @@
 .history
 
 # build
-output
+dist
 build
-
-# temp
-aiml
-brain
+output
